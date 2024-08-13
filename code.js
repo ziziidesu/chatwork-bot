@@ -50,7 +50,7 @@ function doPost(e) {
     } else if (message.includes('(´･ω･`)')) {
       Logger.log("顔文字メッセージが検出されました！");
       sendMessageWithoutReply(API_KEY, ROOM_ID, "(´･ω･`)");
-    } else if ((message.includes('可愛い') || message.includes('かわいい')) && (message.includes('[To:9246623]') || message.includes('aid=9246623'))) {
+    } else if ((message.includes('可愛い') || message.includes('かわいい')) && (message.includes('[To:#]') || message.includes('aid=#'))) {　//'aid＝#'と'[To:#]'の#にはbotアカウントのアカウントidを
       Logger.log("「可愛い」メッセージが検出されました！");
       const replyMessage = getRandomReply();
       sendReply(API_KEY, ROOM_ID, messageId, fromAccountId, roomId, "\n" + replyMessage);
