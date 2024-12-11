@@ -128,7 +128,7 @@ function canDrawOmikuji(accountId) {
   const today = new Date().toDateString(); 
   const key = `omikujiCount_${accountId}_${today}`;
   const count = Number(properties.getProperty(key)) || 0;
-  return count < 3;
+  return count < 1;
 }
 
 function incrementOmikujiCount(accountId) {
